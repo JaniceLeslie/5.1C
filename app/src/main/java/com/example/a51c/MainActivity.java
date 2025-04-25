@@ -17,9 +17,10 @@ public class MainActivity extends AppCompatActivity {
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragmentContainer, new NewsList())
+                    .replace(R.id.fragmentContainer, new LoginFragment())
                     .commit();
         }
+
     }
 
     @Override

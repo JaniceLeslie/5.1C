@@ -71,9 +71,18 @@ public class NewsList extends Fragment {
         topStoriesRecyclerView.setAdapter(topAdapter);
         newsRecyclerView.setAdapter(newsAdapter);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("NEWS");
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
 
 
         return view;
     }
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+    }
+
 
 }
